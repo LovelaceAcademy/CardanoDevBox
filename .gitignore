@@ -1,0 +1,9 @@
+# Terraform artefacts
+.tfstate
+.terraform
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.pem
+*.local
