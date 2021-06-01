@@ -56,4 +56,9 @@ It is easy using the **Remote - SSH** extension in [Visual Studio Code](https://
 If you are unable to SSH to the newly created VM please check the SSH NSG (`"${var.resource-prefix}-dev-nsg"`) rule in the Azure Portal and ensure your current IP is included. Don't forget to follow the steps in `SSH key prep` above too.
 
 ## Running the full Cardano Node
-You can simply run [init.sh](./init.sh) to set the VM up with all the required dependencies and the files required to run a full Cardano node. You can choose to switch between testnet and mainnet networks by commenting/uncommenting the relevant segments. 
+You can simply run [init.sh](./init.sh) to set the VM up with all the required dependencies and the files required to run a full Cardano node. You can choose to switch between testnet (default) and mainnet networks by commenting/uncommenting the relevant segments. This file can also be used locally in a fresh Linux environment. 
+```
+git clone https://github.com/LovelaceAcademy/CardanoDevBox.git
+cd CardanoDevBox
+bash init.sh
+```
