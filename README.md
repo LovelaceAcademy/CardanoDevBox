@@ -1,7 +1,7 @@
 # Cardano Dev Box 
 
 ## Goals
-Provision a SSH'able dev box in the cloud that is ready for Cardano development 
+Provision a SSH'able dev box in the cloud that is ready for Cardano development. This is one of the approaches as described in the guide [Lovelace Academy - Getting Started - Running a Full Cardano Node](https://learn.lovelace.academy/getting-started/running-a-full-node/).
 
 ## Prerequisites
  - **Azure CLI** [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest#install-or-update)
@@ -53,4 +53,7 @@ Note: If you are using Windows, ensure you have [OpenSSH](https://www.howtogeek.
 It is easy using the **Remote - SSH** extension in [Visual Studio Code](https://code.visualstudio.com/download) because it has both an integrated terminal and a full IDE for code manipulation.
 
 ### Troubleshooting SSH issues
-If you are unable to SSH to the newly created VM please check the SSH NSG (`"${var.resource-prefix}-dev-nsg"`) rule in the Azure Portal and ensure your current IP is included.
+If you are unable to SSH to the newly created VM please check the SSH NSG (`"${var.resource-prefix}-dev-nsg"`) rule in the Azure Portal and ensure your current IP is included. Don't forget to follow the steps in `SSH key prep` above too.
+
+## Running the full Cardano Node
+You can simply run [init.sh](./init.sh) to set the VM up with all the required dependencies and the files required to run a full Cardano node. You can choose to switch between testnet and mainnet networks by commenting/uncommenting the relevant segments. 
