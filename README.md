@@ -39,14 +39,14 @@ Using the SSH key output from Terraform, ensure the relevant security rules are 
 
 ### SSH key prep (Windows)
 ```
-$path = "ssh.pem"
-icacls.exe $path /reset
-icacls.exe $path /GRANT:R "$($env:USERNAME):(R)"
-icacls.exe $path /inheritance:r
+$path = "ssh.pem";
+icacls.exe $path /reset;
+icacls.exe $path /GRANT:R "$($env:USERNAME):(R)";
+icacls.exe $path /inheritance:r;
 ```
 
 ### SSH to Provisioned Azure Cloud VMs
-`ssh -i ss.pem ss@20.54.24.228` where 20.54.24.228 is the output from `terraform output cdbpip`.
+`ssh -i ssh.pem sa@20.54.24.228` where _20.54.24.228_ should be replaced by the output from `terraform output cdbpip` and _sa_ should be replaced by the value of variable `cdbvm-username` in `rg-vars.tfvars`.
 
 Note: If you are using Windows, ensure you have [OpenSSH](https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/) 
 
