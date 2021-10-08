@@ -1,11 +1,5 @@
 #!/bin/bash
-# Note: One-off execution only! Do not run more than once in case of failures
-echo
-echo '========================================================='
-echo 'Applying Security Upda  / Patches'
-echo '========================================================='
-sudo unattended-upgrade
-
+# Note: One-off execution only! Do not run more than once
 echo
 echo '========================================================='
 echo 'Main Dependencies'
