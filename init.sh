@@ -43,7 +43,8 @@ sudo make install
 echo
 echo '========================================================='
 echo 'Building and Publishing libsodium Dependency'
-echo '=========================================================\n\n\n\n'
+echo '========================================================='
+mkdir -p ~/git
 cd ~/git/
 git clone https://github.com/input-output-hk/libsodium
 cd libsodium
